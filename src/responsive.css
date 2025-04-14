@@ -1,0 +1,18 @@
+@media screen and (max-width: 651px) {
+    .container-formulario .container-nome {
+        flex-direction: column;
+    }
+
+    .container-formulario .campo-checkbox,
+    .container-formulario .box-query {
+        flex-direction: column;
+    }
+
+    .confirmacao {
+        width: 70%;
+    }
+
+    .container-formulario .mensagem {
+        height: 150px;
+    }
+}
