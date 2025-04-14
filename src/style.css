@@ -1,0 +1,252 @@
+body {
+  max-width: 1920px;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(148, 38%, 91%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.wrapper-formulario {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 85px;
+}
+
+
+.confirmacao {
+  position: absolute;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  display: none;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.confirmacao.transicao {
+  display: flex;
+  opacity: 1;
+}
+
+
+.box-confirmacao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-confirmacao h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.box-confirmacao img {
+  width: 15px;
+  margin-bottom: 10px;
+}
+
+.confirmacao p {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.container-formulario {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container-formulario .container-nome {
+  display: flex;
+  margin: 10px;
+  gap: 15px;
+}
+
+/* .container-formulario .container-nome .campo-nome,
+.container-formulario .container-nome .campo-sobrenome,  */
+.container-formulario .campo-email,
+.container-formulario .campo-query,
+.container-formulario .campo-mensagem,
+.container-formulario .campo-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.container-formulario .campo-checkbox,
+.container-formulario .box-query {
+  display: flex;
+}
+
+
+.container-formulario .botao {
+  background-color: hsl(169, 82%, 27%);
+  width: 100%;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+
+.container-formulario .botao:hover {
+  background-color: hsl(187, 24%, 22%);
+}
+
+
+label {
+  font-size: 0.7rem;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: 1px solid rgb(193, 190, 190);
+  outline: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+
+.nome,
+.sobrenome {
+  width: 100%;
+
+}
+
+textarea {
+  height: 70px;
+  resize: none
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+span {
+  color: hsl(169, 82%, 27%);
+}
+
+.box-query {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.box-query .container-query {
+  display: flex;
+  border: 1px solid rgb(193, 190, 190);
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box-query .container-query.focado {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+
+.box-query .container-query p {
+  font-size: 0.9rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.radio-label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #817e7e;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked+.radio-label {
+  background-image: url('../assets/images/icon-radio-selected.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  border: none;
+
+}
+
+.box-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.box-checkbox p {
+  font-size: 0.7rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #817e7e;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked+label.checkbox-label {
+  background-image: url('../assets/images/icon-checkbox-check.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  border: none;
+
+}
+
+.invalido {
+  color: hsl(0, 61%, 51%);
+  font-size: 0.6rem;
+  margin-top: 10px;
+}
+
+.mostrar {
+  display: none;
+
+}
+
+input.erro,
+textarea.erro {
+  border: 1px solid hsl(0, 66%, 54%);
+}

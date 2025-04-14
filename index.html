@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- links css -->
+  <link rel="stylesheet" href="./src/reset.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/responsive.css">
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap"
+    rel="stylesheet">
+
+
+
+  <title>Frontend Mentor | Contact form</title>
+
+
+</head>
+
+<body>
+  <main>
+    <div class="wrapper-formulario">
+      <div class="container-formulario" id="container-formulario">
+        <h1>Contact Us</h1>
+
+        <div class="confirmacao">
+          <div class="box-confirmacao">
+            <img src="./assets/images/icon-success-check.svg" alt="seta confirmação">
+            <h3>Message Sent!</h3>
+          </div>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+        
+        <form id="formulario">
+          <div class="container-nome">
+
+            <div class="campo-nome">
+              <label for="nome">First Name <span>*</span></label>
+              <input type="text" class="nome campo" id="nome">
+              <p class="mostrar invalido">This field is required</p>
+            </div>
+
+            <div class="campo-sobrenome">
+              <label for="sobrenome">Last Name <span>*</span></label>
+              <input type="text" class="sobrenome campo" id="sobrenome">
+              <p class="mostrar invalido">This field is required</p>
+            </div>
+
+          </div>
+
+          <div class="campo-email">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="text" id="email" class="email campo">
+            <p class="mostrar invalido">Please enter a valid email address</p>
+          </div>
+
+
+
+
+          <div class="campo-query">
+            <label>Query Type <span>*</span></label>
+            <div class="box-query">
+              <div class="container-query">
+                <input type="radio" id="radio1" name="opcao" class="radio" />
+                <label for="radio1" class="radio-label"></label>
+                <p>Support Request</p>
+              </div>
+
+              <div class="container-query">
+                <input type="radio" id="radio2" name="opcao" class="radio" />
+                <label for="radio2" class="radio-label"></label>
+                <p>General Enquiry</p>
+              </div>
+            </div>
+            <p class="mostrar invalido erro-radio">Please select a query type</p>
+          </div>
+
+
+
+
+
+          <div class="campo-mensagem">
+            <label for="mensagem">Message <span>*</span></label>
+            <textarea name="mensagem" id="mensagem" class="mensagem campo"></textarea>
+            <p class="mostrar invalido">This field is required</p>
+          </div>
+
+          <div class="campo-checkbox">
+            <div class="box-checkbox">
+              <input type="checkbox" id="checkbox1" class="campo"/>
+              <label for="checkbox1" class="checkbox-label"></label>
+              <p>I consent to being contacted by the team <span>*</span></p>
+            </div>
+            <p class="mostrar invalido">To submit this form, please consent to being contacted</p>
+          </div>
+
+          <button type="submit" id="botao" class="botao">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+<script src="index.js"></script>
+</body>
+
+</html>
