@@ -73,6 +73,12 @@ body {
   border-radius: 10px;
 }
 
+.container-formulario h1 {
+  padding: 10px;
+}
+
+
+
 .container-formulario .container-nome {
   display: flex;
   margin: 10px;
